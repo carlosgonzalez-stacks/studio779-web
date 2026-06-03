@@ -76,6 +76,7 @@
       letter-spacing: -.01em; color: var(--white);
     }
     .nav-logo svg { flex-shrink: 0; }
+    .nav-logo img { flex-shrink: 0; }
 
     .nav-links {
       display: none; align-items: center; gap: 2rem;
@@ -316,7 +317,15 @@
       display: grid; gap: 0;
     }
     @media(min-width:640px){ .audience-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media(min-width:900px){ .audience-grid { grid-template-columns: repeat(4, 1fr); } }
+    @media(min-width:900px){ .audience-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .audience-images {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px;
+      margin: -2rem -1.75rem 1.25rem; overflow: hidden;
+    }
+    .audience-images img {
+      width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;
+    }
 
     .audience-block {
       border: 1px solid var(--rule); padding: 2rem 1.75rem;
@@ -696,8 +705,7 @@
 <div class="mob-nav" id="mobNav">
   <div class="mob-nav-top">
     <div class="nav-logo">
-      <img src="Logo_rojo_779.svg" width="22" height="22" alt="Studio779">
-      Studio779
+      <img src="Logo_rojo_779.svg" width="40" height="40" alt="Studio779">
     </div>
     <button class="mob-close" onclick="closeMob()">✕</button>
   </div>
@@ -717,8 +725,7 @@
 <nav class="nav">
   <div class="nav-inner">
     <a class="nav-logo" href="#">
-      <img src="Logo_rojo_779.svg" width="22" height="22" alt="Studio779">
-      Studio779
+      <img src="Logo_rojo_779.svg" width="40" height="40" alt="Studio779">
     </a>
     <div class="nav-links">
       <a class="nav-link" href="#areas">Qué diseñamos</a>
@@ -829,7 +836,7 @@
     <div class="section-header fi">
       <div>
         <span class="label">Para quién diseñamos</span>
-        <h2 class="section-h2" style="margin-top:1rem;">Personas que se toman en serio su trabajo</h2>
+        <h2 class="section-h2" style="margin-top:1rem;">Con quien<br>trabajamos</h2>
       </div>
       <div class="section-body" style="padding-top:.5rem;">
         No diseñamos para cualquiera. Diseñamos para quienes entienden que su entorno afecta directamente sus resultados.
@@ -837,6 +844,11 @@
     </div>
     <div class="audience-grid fi" style="transition-delay:.1s">
       <div class="audience-block">
+        <div class="audience-images">
+          <img src="Creador de contenido 1.jpg" alt="Creador de contenido 1">
+          <img src="Creador de contenido 2.jpg" alt="Creador de contenido 2">
+          <img src="Creador de contenido 3.jpg" alt="Creador de contenido 3">
+        </div>
         <div class="audience-label">Perfil 01</div>
         <div class="audience-title">Creadores de contenido</div>
         <p class="audience-desc">Tu setup es parte de tu marca. Diseñamos estudios que se ven increíbles en cámara y optimizan tu flujo de producción.</p>
@@ -848,6 +860,11 @@
         </div>
       </div>
       <div class="audience-block">
+        <div class="audience-images">
+          <img src="Gamers 1.jpg" alt="Gamers 1">
+          <img src="Gamers 2.jpg" alt="Gamers 2">
+          <img src="Gamers 3.jpg" alt="Gamers 3">
+        </div>
         <div class="audience-label">Perfil 02</div>
         <div class="audience-title">Gamers</div>
         <p class="audience-desc">Rendimiento primero, estética incluida. Ergonomía, iluminación, acústica y organización para jugar y crear al máximo nivel.</p>
@@ -865,16 +882,6 @@
           <span class="audience-tag">Diseñadores</span>
           <span class="audience-tag">Programadores</span>
           <span class="audience-tag">Marketers</span>
-        </div>
-      </div>
-      <div class="audience-block">
-        <div class="audience-label">Perfil 04</div>
-        <div class="audience-title">Emprendedores</div>
-        <p class="audience-desc">Tu espacio es donde nacen las ideas y las decisiones. Diseñamos entornos que potencian el pensamiento estratégico.</p>
-        <div class="audience-tags">
-          <span class="audience-tag">Founders</span>
-          <span class="audience-tag">Freelancers</span>
-          <span class="audience-tag">Startups</span>
         </div>
       </div>
     </div>
