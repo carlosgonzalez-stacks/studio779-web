@@ -135,10 +135,21 @@
       min-height: 100vh;
       display: flex; flex-direction: column;
       border-bottom: 1px solid var(--rule);
+      position: relative; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+    }
+    .hero-bg img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .hero-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(21,21,24,.72) 0%, rgba(21,21,24,.55) 60%, rgba(21,21,24,.85) 100%);
     }
     .hero-top {
       flex: 1; display: flex; flex-direction: column; justify-content: center;
-      padding: 6rem 0 4rem;
+      padding: 6rem 0 4rem; position: relative; z-index: 1;
     }
     .hero-tag {
       display: flex; align-items: center; gap: 1rem;
@@ -320,11 +331,10 @@
     @media(min-width:900px){ .audience-grid { grid-template-columns: repeat(3, 1fr); } }
 
     .audience-images {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px;
       margin: -2rem -1.75rem 1.25rem; overflow: hidden;
     }
     .audience-images img {
-      width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;
+      width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;
     }
 
     .audience-block {
@@ -743,6 +753,9 @@
 
 <!-- HERO -->
 <section class="hero" id="inicio">
+  <div class="hero-bg">
+    <img src="Hero_1.jpg" alt="Studio779 — Espacios de trabajo">
+  </div>
   <div class="wrap">
     <div class="hero-top fi">
       <div class="hero-tag">
@@ -774,8 +787,8 @@
     </div>
     <div class="areas-diagram fi" style="transition-delay:.1s">
       <div class="area-block">
-        <div style="width:100%;aspect-ratio:16/9;background:var(--bg3);border-bottom:1px solid var(--rule);margin:-2.5rem -2rem 1.5rem;width:calc(100% + 4rem);display:flex;align-items:center;justify-content:center;">
-          <span style="font-family:'Inter',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);">Imagen del espacio</span>
+        <div style="width:calc(100% + 4rem);aspect-ratio:16/9;margin:-2.5rem -2rem 1.5rem;overflow:hidden;">
+          <img src="Home_office_workstation_Las_tres_areas.jpg" alt="Home Office" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <div class="area-num">Area 01</div>
         <div class="area-title">Home Office</div>
@@ -791,8 +804,8 @@
         </div>
       </div>
       <div class="area-block">
-        <div style="width:100%;aspect-ratio:16/9;background:var(--bg3);border-bottom:1px solid var(--rule);margin:-2.5rem -2rem 1.5rem;width:calc(100% + 4rem);display:flex;align-items:center;justify-content:center;">
-          <span style="font-family:'Inter',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);">Imagen del espacio</span>
+        <div style="width:calc(100% + 4rem);aspect-ratio:16/9;margin:-2.5rem -2rem 1.5rem;overflow:hidden;">
+          <img src="Setup_workstation_Las_tres_areas.jpg" alt="Setup" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <div class="area-num">Area 02</div>
         <div class="area-title">Setup</div>
@@ -808,8 +821,8 @@
         </div>
       </div>
       <div class="area-block">
-        <div style="width:100%;aspect-ratio:16/9;background:var(--bg3);border-bottom:1px solid var(--rule);margin:-2.5rem -2rem 1.5rem;width:calc(100% + 4rem);display:flex;align-items:center;justify-content:center;">
-          <span style="font-family:'Inter',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);">Imagen del espacio</span>
+        <div style="width:calc(100% + 4rem);aspect-ratio:16/9;margin:-2.5rem -2rem 1.5rem;overflow:hidden;">
+          <img src="workstation_Las_tres_areas.jpg" alt="Workstation" style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
         <div class="area-num">Area 03</div>
         <div class="area-title">Workstation</div>
@@ -845,9 +858,7 @@
     <div class="audience-grid fi" style="transition-delay:.1s">
       <div class="audience-block">
         <div class="audience-images">
-          <img src="Creador de contenido 1.jpg" alt="Creador de contenido 1">
-          <img src="Creador de contenido 2.jpg" alt="Creador de contenido 2">
-          <img src="Creador de contenido 3.jpg" alt="Creador de contenido 3">
+          <img src="Creadores_de_contenido.jpg" alt="Creadores de contenido" style="grid-column:1/-1;">
         </div>
         <div class="audience-label">Perfil 01</div>
         <div class="audience-title">Creadores de contenido</div>
@@ -861,9 +872,7 @@
       </div>
       <div class="audience-block">
         <div class="audience-images">
-          <img src="Gamers 1.jpg" alt="Gamers 1">
-          <img src="Gamers 2.jpg" alt="Gamers 2">
-          <img src="Gamers 3.jpg" alt="Gamers 3">
+          <img src="gamer.jpg" alt="Gamers" style="grid-column:1/-1;">
         </div>
         <div class="audience-label">Perfil 02</div>
         <div class="audience-title">Gamers</div>
@@ -875,6 +884,9 @@
         </div>
       </div>
       <div class="audience-block">
+        <div class="audience-images">
+          <img src="Home_Office.jpg" alt="Profesionales digitales" style="grid-column:1/-1;">
+        </div>
         <div class="audience-label">Perfil 03</div>
         <div class="audience-title">Profesionales digitales</div>
         <p class="audience-desc">Trabajas desde casa todos los días. Tu espacio debería ser tan profesional como tú. Home offices que elevan tu trabajo.</p>
