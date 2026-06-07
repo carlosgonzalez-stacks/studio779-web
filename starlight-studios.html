@@ -1,1 +1,231 @@
-STARLIGHT_PLACEHOLDER
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starlight Studios — Studio779</title>
+  <meta name="description" content="Diseñando una experiencia memorable para creadores y marcas. Caso de éxito de Studio779.">
+  <meta property="og:image" content="Starlight_CE_1.jpg">
+  <link rel="icon" href="Logo_779_sin_fondo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--coral:#E8635A;--coral-d:#c94d44;--bg:#151518;--bg2:#1c1c20;--bg3:#222226;--white:#F2EFE9;--dim:rgba(242,239,233,.38);--mid:rgba(242,239,233,.62);--rule:rgba(242,239,233,.09);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--white);-webkit-font-smoothing:antialiased;}
+    a{color:inherit;text-decoration:none;}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 2rem;}
+    .wrap-narrow{max-width:760px;margin:0 auto;padding:0 2rem;}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(21,21,24,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule);}
+    .nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:58px;display:flex;align-items:center;justify-content:space-between;gap:2rem;}
+    .nav-logo{display:flex;align-items:center;gap:.6rem;font-weight:700;font-size:.95rem;}
+    .nav-links{display:flex;align-items:center;gap:1.5rem;}
+    .nav-links a{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);transition:color .15s;}
+    .nav-links a:hover{color:var(--white);}
+    .btn{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;padding:.7rem 1.5rem;border:none;cursor:pointer;transition:all .15s;display:inline-block;text-align:center;}
+    .btn-primary{background:var(--coral);color:var(--bg);}
+    .btn-primary:hover{background:var(--coral-d);}
+    .btn-outline{background:transparent;color:var(--white);border:1px solid var(--rule);}
+    .btn-outline:hover{border-color:var(--coral);color:var(--coral);}
+    .label{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);}
+    .hero{position:relative;min-height:90vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 0 4rem;}
+    .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;background-image:url('Starlight_CE_1.jpg');}
+    .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top, rgba(21,21,24,1) 0%, rgba(21,21,24,.7) 40%, rgba(21,21,24,.3) 100%);}
+    .hero-content{position:relative;z-index:1;}
+    .section{padding:5rem 0;}
+    .section-border{border-bottom:1px solid var(--rule);padding-bottom:4rem;margin-bottom:4rem;}
+    .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin:2rem 0;}
+    .stat-item{background:var(--bg2);padding:1.75rem;}
+    .stat-num{font-size:2.5rem;font-weight:800;letter-spacing:-.04em;color:var(--coral);}
+    .stat-label{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);margin-top:.4rem;}
+    .img-full{width:100%;object-fit:cover;display:block;}
+    .img-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .img-grid-2 img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+    .chip{display:inline-flex;align-items:center;gap:.3rem;background:var(--bg3);border:1px solid var(--rule);padding:.3rem .75rem;font-size:.7rem;margin:.2rem;}
+    .quote-block{padding:2.5rem;background:var(--bg2);border-left:3px solid var(--coral);margin:3rem 0;}
+    .quote-block p{font-size:1.15rem;line-height:1.75;font-weight:300;font-style:italic;}
+    .quote-block .attribution{margin-top:1rem;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--coral);}
+    .obj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;}
+    .obj-card{border:1px solid var(--rule);padding:1.5rem;}
+    .obj-icon{width:36px;height:36px;background:rgba(232,99,90,.12);border:1px solid rgba(232,99,90,.25);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;}
+    .obj-title{font-size:.85rem;font-weight:600;margin-bottom:.4rem;}
+    .obj-desc{font-size:.8rem;color:var(--mid);line-height:1.6;font-weight:300;}
+    .footer-nav{display:flex;gap:1.5rem;flex-wrap:wrap;}
+    @media(max-width:768px){
+      .nav-links{display:none;}
+      .hero{min-height:75vh;}
+      .stat-grid{grid-template-columns:1fr;}
+      .img-grid-2{grid-template-columns:1fr;}
+      .obj-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="Logo_779_sin_fondo.svg" width="36" height="36" alt="Studio779">
+      Studio779
+    </a>
+    <div class="nav-links">
+      <a href="index.html#areas">Espacios</a>
+      <a href="index.html#para-quien">Para quién</a>
+      <a href="index.html#proceso">Proceso</a>
+      <a href="index.html#casos">Proyectos</a>
+      <a href="index.html#faq">FAQ</a>
+    </div>
+    <a href="https://calendar.app.google/8aYPCgEHUDyukyhWA" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:.72rem;padding:.6rem 1.25rem;">Agenda una llamada →</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content wrap">
+    <span class="label" style="display:block;margin-bottom:1rem;">Caso 01 — Productora audiovisual · San Sebastián de los Reyes, Madrid</span>
+    <h1 style="font-size:clamp(3rem,8vw,7rem);font-weight:800;letter-spacing:-.04em;text-transform:uppercase;line-height:.95;margin-bottom:1.5rem;">Starlight<br><em style="font-style:normal;color:var(--coral);">Studios</em></h1>
+    <p style="font-size:clamp(1rem,2vw,1.25rem);color:var(--mid);font-weight:400;line-height:1.5;max-width:560px;">Una productora audiovisual que necesitaba un espacio que transmitiera autoridad desde el primer segundo.</p>
+  </div>
+</div>
+
+<div class="wrap" style="padding:3rem 0;">
+  <div class="stat-grid">
+    <div class="stat-item">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Zonas diseñadas</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Diseño personalizado</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">↑</div>
+      <div class="stat-label">Valor percibido de marca</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="wrap-narrow">
+
+    <div class="section-border">
+      <span class="label" style="display:block;margin-bottom:1.25rem;">El reto</span>
+      <p style="font-size:1.1rem;color:var(--mid);line-height:1.8;font-weight:300;margin-bottom:1.25rem;">Starlight Studios es una productora audiovisual especializada en podcasts, contenido para marcas personales, anuncios publicitarios e infoproductores.</p>
+      <p style="font-size:1.1rem;color:var(--mid);line-height:1.8;font-weight:300;">El reto no era únicamente mejorar la estética del espacio. Querían crear un punto focal que transmitiera una sensación de control, profesionalidad y autoridad desde el primer momento en que un cliente cruzara la puerta.</p>
+    </div>
+
+  </div>
+
+  <div style="width:100%;margin:3rem 0;overflow:hidden;">
+    <img src="Starlight_CE_1.jpg" alt="Starlight Studios — espacio principal" class="img-full" style="aspect-ratio:21/9;max-height:600px;">
+  </div>
+
+  <div class="wrap-narrow">
+
+    <div class="section-border">
+      <span class="label" style="display:block;margin-bottom:1.25rem;">Los objetivos</span>
+      <div class="obj-grid">
+        <div class="obj-card">
+          <div class="obj-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="obj-title">Control y autoridad</div>
+          <p class="obj-desc">Un espacio que proyecte confianza desde el primer segundo.</p>
+        </div>
+        <div class="obj-card">
+          <div class="obj-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="1.5" stroke-linecap="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </div>
+          <div class="obj-title">Escenario de grabación</div>
+          <p class="obj-desc">Funcional para producción de alto nivel y visualmente impactante en cámara.</p>
+        </div>
+        <div class="obj-card">
+          <div class="obj-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="1.5" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="obj-title">Experiencia para el cliente</div>
+          <p class="obj-desc">Elevar el valor percibido de la productora desde el momento de entrada.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="wrap" style="margin:2rem 0 3rem;">
+    <div class="img-grid-2">
+      <img src="Starlight_CE_2.jpg" alt="Starlight Studios — detalle">
+      <img src="Starlight_CE_3.jpg" alt="Starlight Studios — setup">
+    </div>
+  </div>
+
+  <div class="wrap-narrow">
+
+    <div class="section-border">
+      <span class="label" style="display:block;margin-bottom:1.25rem;">La solución</span>
+      <p style="font-size:1.1rem;color:var(--mid);line-height:1.8;font-weight:300;margin-bottom:1.25rem;">Inspirándonos en la narrativa visual de Star Wars y en la estética de los centros de mando futuristas, diseñamos un entorno que proyecta precisión, tecnología y confianza.</p>
+      <p style="font-size:1.1rem;color:var(--mid);line-height:1.8;font-weight:300;margin-bottom:1.5rem;">El resultado es un espacio que no solo funciona como escenario de grabación, sino como una herramienta para generar una experiencia memorable para clientes, invitados y creadores.</p>
+      <div>
+        <span class="chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Dirección de arte</span>
+        <span class="chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Iluminación técnica</span>
+        <span class="chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Acústica</span>
+        <span class="chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Setup técnico</span>
+        <span class="chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Identidad visual</span>
+      </div>
+    </div>
+
+    <div class="quote-block">
+      <p>Un espacio bien diseñado puede elevar instantáneamente el valor percibido de una marca.</p>
+      <div class="attribution">Studio779</div>
+    </div>
+
+  </div>
+
+  <div style="width:100%;margin:2rem 0 4rem;overflow:hidden;">
+    <img src="Starlight_CE_4.jpg" alt="Starlight Studios — resultado final" class="img-full" style="aspect-ratio:16/9;max-height:600px;">
+  </div>
+
+  <div class="wrap-narrow">
+    <div style="text-align:center;padding:3.5rem;background:var(--bg2);border:1px solid var(--rule);">
+      <span class="label" style="display:block;margin-bottom:1rem;">¿Quieres un espacio así?</span>
+      <h3 style="font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;letter-spacing:-.03em;margin-bottom:1rem;">Agenda una llamada sin compromiso</h3>
+      <p style="font-size:.95rem;color:var(--mid);line-height:1.7;max-width:400px;margin:0 auto 2rem;font-weight:300;">30 minutos para analizar tu espacio y ver si encajamos.</p>
+      <a href="https://calendar.app.google/8aYPCgEHUDyukyhWA" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:.8rem;padding:1rem 2.5rem;">Agenda tu llamada →</a>
+    </div>
+  </div>
+
+</div>
+
+<footer style="padding:4rem 0 2rem;border-top:1px solid var(--rule);margin-top:2rem;">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:start;margin-bottom:3rem;">
+      <div>
+        <a class="nav-logo" href="index.html" style="display:inline-flex;margin-bottom:1rem;">
+          <img src="Logo_779_sin_fondo.svg" width="32" height="32" alt="Studio779">
+          <span style="margin-left:.6rem;font-weight:700;">Studio779</span>
+        </a>
+        <p style="font-size:.9rem;color:var(--mid);line-height:1.7;max-width:380px;margin-top:.5rem;font-weight:300;">Studio779 es un estudio de diseño de espacios que impulsan la productividad, creatividad y rendimiento.</p>
+      </div>
+      <div style="display:flex;gap:1rem;align-items:center;">
+        <a href="https://www.instagram.com/studio_779/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--rule);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@studio.779" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--rule);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.78a4.85 4.85 0 0 1-1.01-.09z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div style="border-top:1px solid var(--rule);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+      <span style="font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);">© 2025 Studio779</span>
+      <div class="footer-nav">
+        <a href="index.html#areas" style="font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);">Espacios</a>
+        <a href="index.html#para-quien" style="font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);">Para quién</a>
+        <a href="index.html#proceso" style="font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);">Proceso</a>
+        <a href="index.html#casos" style="font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);">Proyectos</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
