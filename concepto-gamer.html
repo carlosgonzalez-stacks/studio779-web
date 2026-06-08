@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Concepto Gamer — Studio779</title>
-  <meta name="description" content="Cuando el diseño se convierte en una experiencia completamente inmersiva. Caso de éxito de Studio779.">
+  <meta name="description" content="Diseño conceptual de una gaming room completamente inmersiva: iluminación, acústica, ergonomía y narrativa futurista en un universo coherente.">
   <meta property="og:image" content="gamer_room_CE_1.jpg">
   <link rel="icon" href="Logo_779_sin_fondo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,51 +14,107 @@
     :root{--coral:#E8635A;--coral-d:#c94d44;--bg:#151518;--bg2:#1c1c20;--bg3:#222226;--white:#F2EFE9;--dim:rgba(242,239,233,.38);--mid:rgba(242,239,233,.62);--rule:rgba(242,239,233,.09);}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
-    body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--white);-webkit-font-smoothing:antialiased;}
+    body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
     a{color:inherit;text-decoration:none;}
-    .wrap{max-width:1100px;margin:0 auto;padding:0 2rem;}
-    .wrap-narrow{max-width:760px;margin:0 auto;padding:0 2rem;}
-    .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(21,21,24,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule);}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(21,21,24,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--rule);}
     .nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:58px;display:flex;align-items:center;justify-content:space-between;gap:2rem;}
     .nav-logo{display:flex;align-items:center;gap:.6rem;font-weight:700;font-size:.95rem;}
-    .nav-links{display:flex;align-items:center;gap:1.5rem;}
-    .nav-links a{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);transition:color .15s;}
+    .nav-links{display:flex;align-items:center;gap:1.75rem;}
+    .nav-links a{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);transition:color .15s;}
     .nav-links a:hover{color:var(--white);}
-    .btn{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;padding:.7rem 1.5rem;border:none;cursor:pointer;transition:all .15s;display:inline-block;text-align:center;}
+    .btn{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:.65rem 1.4rem;border:none;cursor:pointer;transition:all .15s;display:inline-block;text-align:center;}
     .btn-primary{background:var(--coral);color:var(--bg);}
     .btn-primary:hover{background:var(--coral-d);}
-    .btn-outline{background:transparent;color:var(--white);border:1px solid var(--rule);}
-    .btn-outline:hover{border-color:var(--coral);color:var(--coral);}
-    .label{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);}
-    .hero{position:relative;min-height:90vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 0 4rem;}
-    .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;background-image:url('gamer_room_CE_1.jpg');}
-    .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top, rgba(21,21,24,1) 0%, rgba(21,21,24,.7) 40%, rgba(21,21,24,.3) 100%);}
-    .hero-content{position:relative;z-index:1;}
-    .section{padding:5rem 0;}
-    .section-border{border-bottom:1px solid var(--rule);padding-bottom:4rem;margin-bottom:4rem;}
-    .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin:2rem 0;}
-    .stat-item{background:var(--bg2);padding:1.75rem;}
-    .stat-num{font-size:2.5rem;font-weight:800;letter-spacing:-.04em;color:var(--coral);}
-    .stat-label{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);margin-top:.4rem;}
-    .img-full{width:100%;object-fit:cover;display:block;}
-    .img-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-    .img-grid-2 img{width:100%;aspect-ratio:4/3;object-fit:cover;}
-    .chip{display:inline-flex;align-items:center;gap:.3rem;background:var(--bg3);border:1px solid var(--rule);padding:.3rem .75rem;font-size:.7rem;margin:.2rem;}
-    .quote-block{padding:2.5rem;background:var(--bg2);border-left:3px solid var(--coral);margin:3rem 0;}
-    .quote-block p{font-size:1.15rem;line-height:1.75;font-weight:300;font-style:italic;}
-    .quote-block .attribution{margin-top:1rem;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--coral);}
-    .obj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem;}
-    .obj-card{border:1px solid var(--rule);padding:1.5rem;}
-    .obj-icon{width:36px;height:36px;background:rgba(232,99,90,.12);border:1px solid rgba(232,99,90,.25);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;}
-    .obj-title{font-size:.85rem;font-weight:600;margin-bottom:.4rem;}
-    .obj-desc{font-size:.8rem;color:var(--mid);line-height:1.6;font-weight:300;}
-    .footer-nav{display:flex;gap:1.5rem;flex-wrap:wrap;}
-    @media(max-width:768px){
+
+    /* HERO */
+    .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 0 5rem;}
+    .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;}
+    .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(21,21,24,1) 0%,rgba(21,21,24,.65) 35%,rgba(21,21,24,.15) 100%);}
+    .hero-content{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:0 2rem;width:100%;}
+    .label{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--coral);}
+
+    /* EDITORIAL SECTIONS */
+    .editorial{max-width:1200px;margin:0 auto;padding:0 2rem;}
+
+    /* Alternating row: text + image side by side */
+    .ed-row{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:520px;border-bottom:1px solid var(--rule);}
+    .ed-row.reverse .ed-text{order:2;}
+    .ed-row.reverse .ed-img{order:1;}
+    .ed-text{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem 5rem 0;}
+    .ed-row.reverse .ed-text{padding:5rem 0 5rem 4rem;}
+    .ed-img{overflow:hidden;}
+    .ed-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease;}
+    .ed-img:hover img{transform:scale(1.02);}
+
+    /* Text content inside ed-text */
+    .ed-label{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--coral);margin-bottom:1.25rem;display:block;}
+    .ed-heading{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:1.5rem;}
+    .ed-body{font-size:1rem;color:var(--mid);line-height:1.85;font-weight:300;margin-bottom:1.75rem;}
+    .ed-chips{display:flex;flex-wrap:wrap;gap:.4rem;}
+    .ed-chip{display:inline-flex;align-items:center;gap:.3rem;background:var(--bg3);border:1px solid var(--rule);padding:.3rem .75rem;font-size:.68rem;letter-spacing:.04em;}
+    .ed-chip svg{flex-shrink:0;}
+
+    /* Objective cards inside text column */
+    .obj-list{display:flex;flex-direction:column;gap:1.25rem;margin-bottom:1.75rem;}
+    .obj-item{display:flex;gap:1rem;align-items:flex-start;}
+    .obj-dot{width:32px;height:32px;background:rgba(232,99,90,.12);border:1px solid rgba(232,99,90,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem;}
+    .obj-item-text strong{font-size:.9rem;font-weight:600;display:block;margin-bottom:.25rem;}
+    .obj-item-text p{font-size:.82rem;color:var(--mid);line-height:1.6;font-weight:300;}
+
+    /* Full-width cinematic image */
+    .fw-img{width:100%;overflow:hidden;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+    .fw-img img{width:100%;aspect-ratio:21/9;object-fit:cover;display:block;}
+
+    /* Quote */
+    .quote-section{max-width:800px;margin:0 auto;padding:7rem 2rem;text-align:center;}
+    .quote-section blockquote{font-size:clamp(1.3rem,2.5vw,2rem);font-weight:300;font-style:italic;line-height:1.6;color:var(--white);margin-bottom:1.5rem;}
+    .quote-section cite{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);}
+
+    /* CTA */
+    .cta-section{background:var(--bg2);border-top:1px solid var(--rule);padding:6rem 2rem;text-align:center;}
+    .cta-section h3{font-size:clamp(1.8rem,3.5vw,3rem);font-weight:800;letter-spacing:-.04em;margin-bottom:1rem;}
+    .cta-section p{font-size:1rem;color:var(--mid);max-width:420px;margin:0 auto 2.5rem;line-height:1.7;font-weight:300;}
+
+    /* FOOTER */
+    .footer{padding:4rem 0 2rem;border-top:1px solid var(--rule);}
+    .footer-inner{max-width:1200px;margin:0 auto;padding:0 2rem;}
+    .footer-top{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:start;margin-bottom:3rem;}
+    .footer-logo{display:flex;align-items:center;gap:.6rem;font-weight:700;margin-bottom:.75rem;}
+    .footer-desc{font-size:.88rem;color:var(--mid);line-height:1.7;max-width:380px;font-weight:300;margin-bottom:1.25rem;}
+    .footer-contact{display:flex;flex-wrap:wrap;gap:1.5rem;}
+    .footer-contact a{display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--mid);}
+    .footer-contact a:hover{color:var(--white);}
+    .footer-socials{display:flex;gap:.75rem;align-items:center;}
+    .footer-social-icon{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--rule);transition:border-color .15s;}
+    .footer-social-icon:hover{border-color:var(--coral);}
+    .footer-bottom{border-top:1px solid var(--rule);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-bottom-links{display:flex;gap:1.5rem;}
+    .footer-bottom-links a{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);}
+
+    /* FADE-IN */
+    .fi{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+    .fi.visible{opacity:1;transform:none;}
+    .fi-left{opacity:0;transform:translateX(-30px);transition:opacity .7s ease,transform .7s ease;}
+    .fi-left.visible{opacity:1;transform:none;}
+    .fi-right{opacity:0;transform:translateX(30px);transition:opacity .7s ease,transform .7s ease;}
+    .fi-right.visible{opacity:1;transform:none;}
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .ed-row{grid-template-columns:1fr;min-height:auto;}
+      .ed-row.reverse .ed-text,.ed-row .ed-text{order:2;padding:2.5rem 0;}
+      .ed-row.reverse .ed-img,.ed-row .ed-img{order:1;min-height:300px;}
+      .ed-img img{aspect-ratio:4/3;}
+      .fw-img img{aspect-ratio:16/9;}
       .nav-links{display:none;}
-      .hero{min-height:75vh;}
-      .stat-grid{grid-template-columns:1fr;}
-      .img-grid-2{grid-template-columns:1fr;}
-      .obj-grid{grid-template-columns:1fr;}
+      .footer-top{grid-template-columns:1fr;}
+    }
+    @media(max-width:600px){
+      .hero{min-height:85vh;padding-bottom:3rem;}
+      .quote-section{padding:4rem 1.5rem;}
+      .cta-section{padding:4rem 1.5rem;}
     }
   </style>
 </head>
@@ -67,7 +123,7 @@
 <nav class="nav">
   <div class="nav-inner">
     <a class="nav-logo" href="index.html">
-      <img src="Logo_779_sin_fondo.svg" width="36" height="36" alt="Studio779">
+      <img src="Logo_779_sin_fondo.svg" width="34" height="34" alt="Studio779">
       Studio779
     </a>
     <div class="nav-links">
@@ -77,136 +133,151 @@
       <a href="index.html#casos">Casos de éxito</a>
       <a href="index.html#faq">FAQ</a>
     </div>
-    <a href="https://calendar.app.google/8aYPCgEHUDyukyhWA" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:.72rem;padding:.6rem 1.25rem;">Agenda una llamada →</a>
+    <a href="https://calendar.app.google/8aYPCgEHUDyukyhWA" target="_blank" rel="noopener" class="btn btn-primary">Agenda una llamada →</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content wrap">
-    <span class="label" style="display:block;margin-bottom:1rem;">Caso 03 — Gaming · Diseño conceptual</span>
-    <h1 style="font-size:clamp(3rem,8vw,7rem);font-weight:800;letter-spacing:-.04em;text-transform:uppercase;line-height:.95;margin-bottom:1.5rem;">Concepto<br><em style="font-style:normal;color:var(--coral);">Gamer</em></h1>
-    <p style="font-size:clamp(1rem,2vw,1.25rem);color:var(--mid);font-weight:400;line-height:1.5;max-width:560px;">Cuando el diseño se convierte en una experiencia completamente inmersiva.</p>
+  <div class="hero-bg" style="background-image:url('gamer_room_CE_1.jpg');"></div>
+  <div class="hero-content fi">
+    <span class="label" style="display:block;margin-bottom:1.25rem;">Caso 03 — Gaming · Diseño conceptual</span>
+    <h1 style="font-size:clamp(3.5rem,9vw,8rem);font-weight:800;letter-spacing:-.05em;text-transform:uppercase;line-height:.9;margin-bottom:1.5rem;">Concepto<br><em style="font-style:normal;color:var(--coral);">Gamer</em></h1>
+    <p style="font-size:clamp(1rem,1.8vw,1.2rem);color:var(--mid);font-weight:400;line-height:1.6;max-width:520px;">Cuando el diseño se convierte en una experiencia completamente inmersiva.</p>
   </div>
 </div>
 
-<div class="section">
-  <div class="wrap-narrow">
-
-    <div class="section-border">
-      <span class="label" style="display:block;margin-bottom:1.25rem;">El reto</span>
-      <p style="font-size:1.1rem;color:var(--mid);line-height:1.8;font-weight:300;margin-bottom:1.25rem;">Este proyecto nace con un objetivo diferente: demostrar hasta dónde puede llegar el diseño cuando se combina creatividad, tecnología e imaginación.</p>
-      <p style="font-size:1.1rem;color:var(--mid);line-height:1.8;font-weight:300;">Más que un espacio real, este concepto representa la capacidad de Studio779 para transformar una idea en una experiencia visual completamente inmersiva.</p>
-    </div>
-
-  </div>
-
-  <div style="width:100%;margin:3rem 0;overflow:hidden;">
-    <img src="gamer_room_CE_2.jpg" alt="Concepto Gamer — detalle" class="img-full" style="aspect-ratio:16/9;max-height:600px;">
-  </div>
-
-  <div class="wrap-narrow">
-
-    <div class="section-border">
-      <span class="label" style="display:block;margin-bottom:1.25rem;">La visión</span>
-      <div class="obj-grid">
-        <div class="obj-card">
-          <div class="obj-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="1.5" stroke-linecap="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          </div>
-          <div class="obj-title">Inmersión total</div>
-          <p class="obj-desc">Iluminación, acústica, materiales y tecnología creando un universo único.</p>
-        </div>
-        <div class="obj-card">
-          <div class="obj-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="1.5" stroke-linecap="round"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="15" cy="11" r="1" fill="#E8635A" stroke="none"/><circle cx="17" cy="13" r="1" fill="#E8635A" stroke="none"/><path d="M6 20a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2"/><path d="M4 14h16"/></svg>
-          </div>
-          <div class="obj-title">Rendimiento extremo</div>
-          <p class="obj-desc">Ergonomía y tecnología al servicio del rendimiento en cada sesión.</p>
-        </div>
-        <div class="obj-card">
-          <div class="obj-icon">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
-          </div>
-          <div class="obj-title">Identidad visual</div>
-          <p class="obj-desc">Narrativa futurista coherente de suelo a techo.</p>
-        </div>
+<!-- ROW 1: El concepto — texto izq, imagen der -->
+<div class="editorial">
+  <div class="ed-row">
+    <div class="ed-text fi-left">
+      <span class="ed-label">El concepto</span>
+      <h2 class="ed-heading">Un universo<br>diseñado alrededor<br>de una pasión</h2>
+      <p class="ed-body">Este proyecto nace con un objetivo diferente: demostrar hasta dónde puede llegar el diseño cuando se combina creatividad, tecnología e imaginación. Más que un espacio real, este concepto representa la capacidad de Studio779 para transformar una idea en una experiencia visual completamente inmersiva.</p>
+      <div class="ed-chips">
+        <span class="ed-chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Diseño conceptual</span>
+        <span class="ed-chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Narrativa futurista</span>
+        <span class="ed-chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Identidad inmersiva</span>
       </div>
     </div>
-
+    <div class="ed-img fi-right">
+      <img src="gamer_room_CE_2.jpg" alt="Concepto Gamer — imagen 2">
+    </div>
   </div>
+</div>
 
-  <div class="wrap" style="margin:2rem 0 3rem;">
-    <div class="img-grid-2">
-      <img src="gamer_room_CE_3.jpg" alt="Concepto Gamer — imagen 3">
+<!-- FULL-WIDTH CE_3 -->
+<div class="fw-img fi">
+  <img src="gamer_room_CE_3.jpg" alt="Concepto Gamer — imagen 3">
+</div>
+
+<!-- ROW 2: La visión — imagen izq, texto der -->
+<div class="editorial">
+  <div class="ed-row reverse">
+    <div class="ed-img fi-left">
       <img src="gamer_room_CE_4.jpg" alt="Concepto Gamer — imagen 4">
     </div>
-  </div>
-
-  <div style="width:100%;margin:1rem 0 3rem;overflow:hidden;">
-    <img src="gamer_room_CE_5.jpg" alt="Concepto Gamer — imagen 5" class="img-full" style="aspect-ratio:16/9;max-height:600px;">
-  </div>
-
-  <div class="wrap-narrow">
-
-    <div class="section-border">
-      <span class="label" style="display:block;margin-bottom:1.25rem;">El concepto</span>
-      <p style="font-size:1.1rem;color:var(--mid);line-height:1.8;font-weight:300;margin-bottom:1.25rem;">Inspirado en la estética futurista del gaming y la ciencia ficción, el proyecto explora cómo iluminación, acústica, materiales, tecnología y narrativa visual pueden trabajar juntos para crear entornos con una identidad única.</p>
-      <p style="font-size:1.1rem;color:var(--mid);line-height:1.8;font-weight:300;margin-bottom:1.5rem;">No se trata de diseñar un setup bonito. Se trata de construir un universo alrededor de una pasión.</p>
-      <div>
-        <span class="chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Iluminación RGB</span>
-        <span class="chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Acústica</span>
-        <span class="chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Ergonomía</span>
-        <span class="chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Identidad visual</span>
-        <span class="chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Tecnología inmersiva</span>
+    <div class="ed-text fi-right">
+      <span class="ed-label">La visión</span>
+      <h2 class="ed-heading">Inmersión total,<br>rendimiento extremo</h2>
+      <div class="obj-list">
+        <div class="obj-item">
+          <div class="obj-dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="1.5" stroke-linecap="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div class="obj-item-text"><strong>Inmersión total</strong><p>Iluminación, acústica, materiales y tecnología creando un universo único de suelo a techo.</p></div>
+        </div>
+        <div class="obj-item">
+          <div class="obj-dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="1.5" stroke-linecap="round"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="15" cy="11" r="1.5" fill="#E8635A" stroke="none"/><circle cx="17" cy="13" r="1.5" fill="#E8635A" stroke="none"/><path d="M6 20a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2"/><path d="M4 14h16"/></svg></div>
+          <div class="obj-item-text"><strong>Rendimiento extremo</strong><p>Ergonomía y tecnología al servicio del rendimiento en cada sesión de juego.</p></div>
+        </div>
+        <div class="obj-item">
+          <div class="obj-dot"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></div>
+          <div class="obj-item-text"><strong>Identidad visual coherente</strong><p>Narrativa futurista y sci-fi que se mantiene coherente en cada rincón del espacio.</p></div>
+        </div>
       </div>
     </div>
-
-    <div class="quote-block">
-      <p>No somos los típicos interioristas. No diseñamos espacios a partir de tendencias. Diseñamos entornos alrededor de las personas, sus objetivos y las emociones que quieren transmitir.</p>
-      <div class="attribution">Studio779</div>
-    </div>
-
-    <div style="text-align:center;padding:3.5rem;background:var(--bg2);border:1px solid var(--rule);">
-      <span class="label" style="display:block;margin-bottom:1rem;">¿Quieres un espacio así?</span>
-      <h3 style="font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;letter-spacing:-.03em;margin-bottom:1rem;">Agenda una llamada sin compromiso</h3>
-      <p style="font-size:.95rem;color:var(--mid);line-height:1.7;max-width:400px;margin:0 auto 2rem;font-weight:300;">30 minutos para analizar tu espacio y ver si encajamos.</p>
-      <a href="https://calendar.app.google/8aYPCgEHUDyukyhWA" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:.8rem;padding:1rem 2.5rem;">Agenda tu llamada →</a>
-    </div>
-
   </div>
 
+  <!-- ROW 3: La filosofía — texto izq, imagen der -->
+  <div class="ed-row">
+    <div class="ed-text fi-left">
+      <span class="ed-label">La filosofía</span>
+      <h2 class="ed-heading">No un setup bonito.<br>Un universo.</h2>
+      <p class="ed-body">Inspirado en la estética futurista del gaming y la ciencia ficción, el proyecto explora cómo iluminación, acústica, materiales, tecnología y narrativa visual pueden trabajar juntos para crear entornos con una identidad única.</p>
+      <p class="ed-body">No se trata de diseñar un setup bonito. Se trata de construir un universo alrededor de una pasión.</p>
+      <div class="ed-chips">
+        <span class="ed-chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Iluminación RGB</span>
+        <span class="ed-chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Acústica</span>
+        <span class="ed-chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Ergonomía</span>
+        <span class="ed-chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Identidad visual</span>
+        <span class="ed-chip"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#E8635A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Tecnología inmersiva</span>
+      </div>
+    </div>
+    <div class="ed-img fi-right">
+      <img src="gamer_room_CE_5.jpg" alt="Concepto Gamer — imagen 5">
+    </div>
+  </div>
 </div>
 
-<footer style="padding:4rem 0 2rem;border-top:1px solid var(--rule);margin-top:2rem;">
-  <div class="wrap">
-    <div style="display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:start;margin-bottom:3rem;">
+<!-- QUOTE -->
+<div class="quote-section fi">
+  <blockquote>"No somos los típicos interioristas. Diseñamos entornos alrededor de las personas, sus objetivos y las emociones que quieren transmitir."</blockquote>
+  <cite>Studio779</cite>
+</div>
+
+<!-- CTA -->
+<div class="cta-section fi">
+  <span class="label" style="display:block;margin-bottom:1rem;">¿Quieres un espacio así?</span>
+  <h3>Agenda una llamada<br>sin compromiso</h3>
+  <p>30 minutos para analizar tu espacio y ver si encajamos. Sin presión.</p>
+  <a href="https://calendar.app.google/8aYPCgEHUDyukyhWA" target="_blank" rel="noopener" class="btn btn-primary" style="padding:1rem 2.5rem;font-size:.8rem;">Agenda tu llamada →</a>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
       <div>
-        <a class="nav-logo" href="index.html" style="display:inline-flex;margin-bottom:1rem;">
-          <img src="Logo_779_sin_fondo.svg" width="32" height="32" alt="Studio779">
-          <span style="margin-left:.6rem;font-weight:700;">Studio779</span>
+        <a class="footer-logo" href="index.html">
+          <img src="Logo_779_sin_fondo.svg" width="30" height="30" alt="Studio779">
+          Studio779
         </a>
-        <p style="font-size:.9rem;color:var(--mid);line-height:1.7;max-width:380px;margin-top:.5rem;font-weight:300;">Studio779 es un estudio de diseño de espacios que impulsan la productividad, creatividad y rendimiento.</p>
+        <p class="footer-desc">Studio779 es un estudio de diseño de espacios que impulsan la productividad, creatividad y rendimiento.</p>
+        <div class="footer-contact">
+          <a href="https://wa.me/34625136358" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            +34 625 136 358
+          </a>
+          <a href="mailto:contacto@studio779.design">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            contacto@studio779.design
+          </a>
+        </div>
       </div>
-      <div style="display:flex;gap:1rem;align-items:center;">
-        <a href="https://www.instagram.com/studio_779/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--rule);">
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/studio_779/" target="_blank" rel="noopener" class="footer-social-icon">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
         </a>
-        <a href="https://www.tiktok.com/@studio.779" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--rule);">
+        <a href="https://www.tiktok.com/@studio.779" target="_blank" rel="noopener" class="footer-social-icon">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.78a4.85 4.85 0 0 1-1.01-.09z"/></svg>
         </a>
       </div>
     </div>
-    <div style="border-top:1px solid var(--rule);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
-      <span style="font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);">© 2025 Studio779</span>
-      <div class="footer-nav">
-        <a href="index.html#areas" style="font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);">Qué hacemos</a>
-        <a href="index.html#para-quien" style="font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);">Nuestros clientes</a>
-        <a href="index.html#proceso" style="font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);">Proceso</a>
-        <a href="index.html#casos" style="font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);">Casos de éxito</a>
+    <div class="footer-bottom">
+      <span style="font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);">© 2025 Studio779</span>
+      <div class="footer-bottom-links">
+        <a href="index.html#areas">Qué hacemos</a>
+        <a href="index.html#para-quien">Nuestros clientes</a>
+        <a href="index.html#proceso">Proceso</a>
+        <a href="index.html#casos">Casos de éxito</a>
       </div>
     </div>
   </div>
 </footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }});
+}, {threshold:0.12});
+document.querySelectorAll('.fi,.fi-left,.fi-right').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
